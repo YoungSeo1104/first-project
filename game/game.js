@@ -10,6 +10,7 @@ let resultArea = document.getElementById('result-area');
 let imgArea = document.getElementById('img-area');
 
 playButton.addEventListener('click', play);
+userInput.addEventListener('keypress', enterKey);
 userInput.addEventListener('focus', focusInput);
 resetButton.addEventListener('click', reset);
 
@@ -33,6 +34,9 @@ function play() {
     return;
   }
 
+  chances--;
+  chanceArea.textContent = `⭐️남은기회: ${chances}번⭐️`;
+
   if (computerNum > userValue) {
     imgArea.src = 'gif/up.gif';
     resultArea.textContent = 'Up⬆️';
@@ -45,9 +49,6 @@ function play() {
   }
 
   history.push(userValue);
-
-  chances--;
-  chanceArea.textContent = `⭐️남은기회: ${chances}번⭐️`;
 
   if (chances < 1) {
     playButton.disabled = true;
@@ -63,10 +64,17 @@ function reset() {
   chances = 3;
   chanceArea.textContent = `⭐️남은기회: ${chances}번⭐️`;
   imgArea.src = 'gif/check.gif';
+  resultArea.textContent = '결과창';
 }
 
 function focusInput() {
   userInput.value = '';
+}
+
+function enterKey(e) {
+  if (e.key === 'Enter') {
+    play();
+  }
 }
 
 pickRandomNum();

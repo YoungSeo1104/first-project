@@ -7,17 +7,28 @@
   <style>
     body {text-align: center;}
     img {width: 100%; height: 300px; object-fit: contain;}
+    li { list-style: none; text-align: left; }
+    a { text-decoration: none; color: black; }
+    .playBox { display: flex; justify-content: center; height: 40px; }
+    .playBox button { width: 45px; font-size: 15px; border: none; }
+    #user-input { border: 1px solid #d5d5d5; border-right: none; }
+    #play-button { color: #fff; background: #0088ff; }
+    #reset-button { background: #def0ff; }
   </style>
 </head>
 <body>
+  <!-- <ul>
+    <li><a href="https://ys1104.netlify.app/">Main</a></li>
+  </ul> -->
   <h1>🤖숫자를 맞추기 게임🤖</h1>
-  <h3>💗1~10까지 버튼을 맞춰보세요!💗</h3>
+  <h3>💗1~10까지 버튼을 맞춰보세요!💗 (<span id="chance-area">⭐️기회는 단 3번⭐️</span>)</h3>
   <img id="img-area" src="gif/check.gif" alt="이미지">
-  <div id="chance-area">⭐️기회는 단 3번⭐️</div>
-  <div id="result-area"></div>
-  <input id="user-input" type="number" />
-  <button id="play-button">Go</button>
-  <button id="reset-button">reset</button>
+  <h3 id="result-area">결과창</h3>
+  <div class="playBox">
+    <input id="user-input" type="number" />
+    <button id="play-button">Go</button>
+    <button id="reset-button">reset</button>
+  </div>
   <script src="game.js"></script>
 </body>
 </html>
