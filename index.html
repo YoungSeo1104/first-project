@@ -5,10 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>project</title>
   <link rel="stylesheet" href="style.css">
+  <title>🤖숫자를 맞춰라~🧩</title>
 </head>
 <body>
-  <ul>
-    <li><a href='game/game.html'>🤖숫자 맞추기 게임🤖</a></li>
-  </ul>
+  <h1>🤖숫자를 맞추기 게임🤖</h1>
+  <h3>💗1~10까지 버튼을 맞춰보세요!💗 (<span id="chance-area">⭐️기회는 단 3번⭐️</span>)</h3>
+  <img id="img-area" src="images/check.gif" alt="이미지">
+  <h3 id="result-area">결과창</h3>
+  <div class="playBox">
+    <input id="user-input" type="number" />
+    <button id="play-button">Go</button>
+    <button id="reset-button">reset</button>
+  </div>
+  <script src="main.js"></script>
 </body>
 </html>

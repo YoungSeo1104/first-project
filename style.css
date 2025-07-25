@@ -1,3 +1,9 @@
-li {
-  list-style: none;
-}
+body {text-align: center;}
+img {width: 100%; height: 300px; object-fit: contain;}
+li { list-style: none; text-align: left; }
+a { text-decoration: none; color: black; }
+.playBox { display: flex; justify-content: center; height: 40px; }
+.playBox button { width: 45px; font-size: 15px; border: none; }
+#user-input { border: 1px solid #d5d5d5; border-right: none; }
+#play-button { color: #fff; background: #0088ff; }
+#reset-button { background: #def0ff; }
